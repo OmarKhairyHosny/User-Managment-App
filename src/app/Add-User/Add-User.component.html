@@ -1,0 +1,28 @@
+<mat-card-header>
+    
+        <mat-card-title>Add User </mat-card-title>
+    
+</mat-card-header>
+<hr>
+<mat-card-content>
+    <div class="container">
+        <form fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="20px">
+
+            
+                <div fxLayout="column" fxLayoutGap="20px">
+                    <input placeholder="first name" class="form-control" [(ngModel)]="user.firstName" name="firstName"
+                        id="custom">
+                    <input placeholder="Last name" class="form-control" name="LastName" [(ngModel)]="user.lastName" id="custom">
+
+                    <input placeholder="Email" class="form-control" type="email" [(ngModel)]="user.email" name="Email"
+                        id="custom">
+
+                </div>
+                <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center stretch">
+                    <button (click)="OnClick()" class="cancelbtn">Cancel</button>
+                    <button (click)="createUser()" class="Greatbtn">Great User</button>
+                </div>
+            
+        </form>
+    </div>
+</mat-card-content>

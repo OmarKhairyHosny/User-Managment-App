@@ -1,0 +1,38 @@
+<mat-toolbar class="page">
+  <div fxFlex="400" fxLayout="row">
+
+    <a mat-button fxFlex="auto">akigai</a>
+    <a layout-align="end" routerLink="/login">SIGN IN</a>
+
+  </div>
+</mat-toolbar>
+<br>
+<h1 fxLayout="row" fxLayoutAlign="center stretch" class="welcomeText">
+  Welcome To user mangment app
+</h1>
+
+<div  fxLayout="column" fxLayoutAlign="center center">
+  <h2>User Details</h2>
+  <table id="customers">
+    <thead class="border">
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+
+
+    </tbody>
+
+
+
+
+  </table>
+  </div>

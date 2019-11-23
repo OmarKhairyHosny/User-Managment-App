@@ -1,0 +1,53 @@
+<div fxLayoutGap="5px" class="position">
+  <mat-toolbar class="page" layout-fill>
+    <div fxFlex="400" fxLayout="row">
+
+      <a mat-button fxFlex="auto">akigai</a>
+      <a layout-align="end" routerLink="/signOut">SIGN OUT</a>
+
+    </div>
+  </mat-toolbar>
+  <br>
+  <h1 fxLayout="row" fxLayoutAlign="center stretch" class="welcomeText">
+    Welcome To user mangment app
+
+  </h1>
+
+
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="40px">
+    <h2 fxLayoutAlign="start">User Details</h2>
+    <table id="customers">
+      <thead>
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+          <th id="action">Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>
+            <mat-icon (click)="removemessage(user)" class="icon">cancel</mat-icon>
+             <mat-icon (click)="OpenEditForm(user)" class="icon">create</mat-icon>
+
+
+
+          </td>
+
+      </tbody>
+
+    </table>
+    <button  fxFlex="50" class="add" fxLayoutAlign="center" (click)="Add()">Add User</button>
+  </div>
+
+
+
+
+
+</div>
